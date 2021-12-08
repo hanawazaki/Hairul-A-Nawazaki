@@ -1,15 +1,25 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import ProductList from "./components/ProductList.vue";
+export default {
+  components: { ProductList },
+};
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="navbar">
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Category</a></li>
+      <li><a href="#">Category</a></li>
+      <li><a href="#">Dropdown</a></li>
+      <li><a href="#">Dropdown</a></li>
+      <li><a href="#">Dropdown</a></li>
+    </ul>
+  </div>
+  <ProductList />
 </template>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -17,5 +27,21 @@ import HelloWorld from './components/HelloWorld.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.nav {
+  display: flex;
+  list-style: none;
+  padding: 20px;
+  background-color: #f44336;
+}
+
+li {
+  margin: 0 10px;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
 }
 </style>
